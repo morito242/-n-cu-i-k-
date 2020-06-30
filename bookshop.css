@@ -1,0 +1,815 @@
+/*Trang*/
+html 
+{
+	box-sizing:border-box;
+}
+
+*, *:before, *:after 
+{
+	box-sizing:inherit;
+}
+
+* 
+{
+	padding: 0; 
+	margin-top: 0 !important;
+	margin-bottom: 0 !important;
+}
+
+html 
+{
+	-ms-text-size-adjust:100%;	
+	-webkit-text-size-adjust:100%;
+}
+
+body 
+{
+	margin:0;
+	background: #ccc !important;
+}
+
+a 
+{
+	background-color:transparent;
+}
+
+a:active, a:hover 
+{
+	outline-width:0;
+}
+
+img 
+{
+	border-style:none;
+}
+
+footer
+{
+	display: block;
+}
+
+button,input,select,textarea,optgroup 
+{
+	font:inherit; 
+	margin:0;
+}
+
+optgroup 
+{
+	font-weight:bold;
+}
+
+button, input 
+{
+	overflow:visible;
+}
+
+button, select 
+{
+	text-transform:none;
+}
+
+button, [type=button], [type=reset], [type=submit] 
+{
+	-webkit-appearance:button;
+}
+
+button::-moz-focus-inner, [type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner 
+{
+	border-style:none; 
+	padding:0;
+}
+
+button:-moz-focusring, [type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring
+{
+	outline:1px dotted ButtonText;
+}
+
+html, body 
+{
+	font-family:Verdana, sans-serif!important; 
+	font-size:15px!important; 
+	line-height:1.5;
+}
+
+html 
+{
+	overflow-x:hidden;
+}
+
+h1 
+{
+	font-size:36px;
+}
+
+h2 
+{
+	font-size:30px;
+}
+
+h3 
+{
+	font-size:24px;
+}
+
+h4 
+{
+	font-size:20px;
+}
+
+h5 
+{
+	font-size:18px;
+}
+
+h6 
+{
+	font-size:16px;
+}
+
+h1, h2, h3, h4, h5, h6 
+{
+	font-family:"Segoe UI",Arial,sans-serif; 
+	font-weight:400;
+	 margin:10px 0;
+}
+
+img 
+{
+	vertical-align:middle;
+} 
+
+a 
+{
+	color:inherit!important;
+}
+/**/
+/*===============================================================================================================*/
+/*Thanh Menu*/
+a 
+{
+	text-decoration: none;
+}
+
+li 
+{
+	list-style-type: none;
+}
+
+.ttop 
+{
+	position: fixed; 
+	width: 100%; 
+	z-index: 1;
+}
+
+.ttop 
+{
+	top: 0;
+}
+
+.tr
+{
+	font-size: 16px;
+	font-weight: 800;
+}
+
+#re, #ye
+{
+	font-size: 18px;
+}
+
+#re
+{
+	color: #f00;
+}
+
+#ye
+{
+	color: #ff0;
+}
+
+.tbar 
+{
+	width: 100%; 
+	overflow: hidden;
+}
+
+.tcenter .tbar
+{
+	display: inline-block; 
+	width: auto;
+}
+
+.tbar:before, .tbar:after 
+{
+	content: ""; 
+	display: table; 
+	clear: both;
+}
+
+.tbutton 
+{
+	border: none; 
+	display: inline-block; 
+	padding: 8px 16px; 
+	vertical-align: middle; 
+	overflow: hidden; 
+	text-decoration: none; 
+	color: inherit; 
+	background-color: inherit; 
+	text-align: center; 
+	cursor: pointer; 
+	white-space: nowrap;
+}
+
+.tbutton 
+{
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none;
+} 
+
+.tbutton:disabled 
+{
+	cursor: not-allowed; 
+	opacity: 0.3;
+}
+
+.tbutton:hover 
+{
+	color: #000; 
+	background-color: #ccc;
+}
+
+.tbarblock .tdownhover,.tbarblock .tdownclick
+{
+	width:100%;
+}
+
+.tbarblock .tdownhover .wtdowncontent,.tbarblock .tdownclick .tdowncontent
+{
+	min-width:100%;
+}
+
+.tbarblock .tbaritem
+{
+	width: 100%; 
+	display: block; 
+	padding: 8px 16px; 
+	text-align: left; 
+	border: none; 
+	white-space: normal; 
+	float: none; 
+	outline: 0;
+}
+
+.tbarblock.tcenter .tbaritem
+{
+	text-align: center;
+}
+
+.tbar .tbaritem
+{
+	padding: 8px 16px; 
+	float: left; 
+	width: auto; 
+	border: none; 
+	display: block; 
+	outline: 0;
+}
+
+.tbar .tdownhover, .tbar .tdownclick 
+{
+	position: static; 
+	float: left;
+}
+
+.tbar .tbutton 
+{
+	white-space: normal;
+}
+
+.tbarblock .tdownhover .tbutton, .tbarblock .tdownclick .tbutton 
+{
+	width: 100%; 
+	text-align: left; 
+	padding: 8px 16px;
+}
+
+.tanimateleft 
+{
+	position: relative; 
+	animation: animateleft 0.4s;
+}
+@keyframes animateleft{from {left: -300px; opacity: 0;} to {left: 0;opacity: 1;}}
+
+.tblack 
+{
+	color: #fff!important; 
+	background: #000!important;
+}
+
+.tcard 
+{
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.tpaddinglarge 
+{
+	padding: 12px 24px!important;
+}
+
+.tright 
+{
+	float: right!important;
+}
+
+.tleft 
+{
+	float: left!important;
+}
+
+.tlarge 
+{
+	font-size: 18px!important;
+}
+
+.tpadding16 
+{
+	padding-top: 16px!important; 
+	padding-bottom: 16px!important;
+}
+
+.tsidebar 
+{
+	height:100%;
+	width:200px;
+	background-color:#fff;
+	position:fixed!important;
+	z-index:1;
+	overflow:auto;
+}
+
+.tdisplaytopright 
+{
+	position:absolute; 
+	right:-80px; 
+	top:0
+}
+
+@media (max-width: 600px)
+{
+	.tbaritem 
+	{
+		text-align: center;
+	}
+
+	.tbutton 
+	{
+		width: 100%;
+	}
+
+	.thidesmall 
+	{
+		display: none !important;
+	}
+}
+
+@media (max-width: 992px) and (min-width: 601px)
+{
+	.thidemedium 
+	{
+		display: none !important;
+	}
+}
+
+@media (min-width: 993px)
+{
+	.thidelarge 
+	{
+		display: none !important;
+	}
+	/*
+	.tsidebar 
+	{
+		display: block !important;
+	}*/
+}
+
+@media (max-width: 992px)
+{
+	.tsidebar 
+	{
+		display: none;
+	}
+}
+#sidebar 
+{
+	display: none;
+}
+
+#mebar 
+{
+  background-color: #333;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+}
+/**/
+
+/*Search*/
+.search input 
+{
+	background: none;
+	outline: none;
+	border: none;
+	padding: 0;
+	margin: 0;
+	width: 0px;
+	transition: 0.8s ease;
+	color: #fff;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.search a
+{
+	color: #fff;
+	text-align: center;
+	width: 60px;
+	font-size: 18px;
+}
+
+.search:hover input
+{
+	width: 150px;
+	margin: 0 10px;
+	border-bottom: 2px solid #9a9a9a;
+}
+
+.search input:focus
+{
+	width: 150px;
+	margin: 0 10px;
+	border-bottom: 2px solid #9a9a9a;
+}
+
+.search input::placholder
+{
+	color: antiquewhite;
+}
+/**/
+
+/*Cart*/
+.cart
+{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.4);
+}
+
+.cartcontent
+{
+	margin: 0 auto;
+	width: 50%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,0.2);
+	border-radius: 0.3rem;
+	outline: 0;
+	color: #000;
+}
+
+.cartbody
+{
+	padding: 1rem;
+}
+
+.cartfooter
+{
+	display: flex;
+	border-top: 1px solid #aaa;
+	padding: 1rem;
+	flex-direction: row;
+	justify-content: flex-end;
+	border-top: 1px solid #aaa;
+	padding: 1rem;
+}
+
+.cartfooter > :not(:first-child)
+{
+	margin-left: 0.25rem;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  font-weight: 400;
+  line-height: 1.25;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid transparent;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  border-radius: .25rem;
+  transition: all .2s ease-in-out;
+}
+
+.btnsecondary {
+  color: #292b2c;
+  background-color: #fff;
+  border-color: #ccc;
+}
+
+.btnprimary {
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.cartheader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaaaaa;
+  padding: 1rem;
+}
+
+h5.carttitle {
+  font-size: 1.5rem;
+}
+
+.close {
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*cart(TT)*/
+.ghheader 
+{
+	font-weight: bold; 
+	font-size: 1.25em; 
+	color: #333;
+}
+
+.ghcolumn 
+{
+	display: flex; 
+	align-items: center; 
+	border-bottom: 1px solid black; 
+	margin-right: 1.5em; 
+	padding-bottom: 10px; 
+	margin-top: 10px;
+}
+
+.ghrow 
+{
+	display: flex;
+}
+
+.ghitem 
+{
+	width: 45%;
+}
+
+.ghprice 
+{
+	width: 20%; 
+	font-size: 1.2em; 
+	color: #333;
+}
+
+.ghquantity 
+{
+	width: 35%;
+}
+
+.ghitemtitle 
+{
+	color: #333; 
+	margin-left: .5em; 
+	font-size: 1.2em;
+}
+
+.ghitemimage 
+{
+	width: 75px; 
+	height: auto; 
+	border-radius: 10px;
+}
+
+.ghdanger 
+{
+	color: white; 
+	background-color: #EB5757; 
+	border: none; 
+	border-radius: .3em; 
+	font-weight: bold;
+}
+
+.ghdanger:hover 
+{
+	background-color: #CC4C4C;
+}
+
+.ghquantityinput 
+{
+	height: 34px; 
+	width: 50px; 
+	border-radius: 5px; 
+	border: 1px solid #56CCF2; 
+	background-color: #eee; 
+	color: #333; 
+	padding: 0; 
+	text-align: center; 
+	font-size: 1.2em; 
+	margin-right: 25px;
+}
+
+.ghrow:last-child 
+{
+	border-bottom: 1px solid black;
+}
+
+.ghrow:last-child .ghcolumn 
+{
+	border: none;
+}
+
+.ghtotal 
+{
+	text-align: end; 
+	margin-top: 10px; 
+	margin-right: 10px;
+}
+
+.ghtotaltitle 
+{
+	font-weight: bold; 
+	font-size: 1.5em; 
+	color: black; 
+	margin-right: 20px;
+}
+
+.ghtotalprice 
+{
+	color: #333; 
+	font-size: 1.1em;
+}
+.cont
+{
+	padding: .5rem 0; 
+	overflow: hidden; 
+	color: #222; 
+	font-weight: 500; 
+	font-size: 22px; 
+	max-height: 50px; 
+	min-height: 50px; 
+	text-align: center; 
+	line-height: 19px; 
+	margin: 0 0 4px;
+}
+
+.price
+{
+	margin-right: 1rem;
+}
+
+/**/
+
+/*Back to top*/
+#back-to-top
+{
+	cursor:pointer;
+	width:40px;
+	height:40px;
+	overflow:hidden;
+	text-align:center;
+	border:1px solid #ddd;
+	color:#ee2c74;
+	border-radius:3px;
+	float:left;
+	position:fixed;
+	right:10px;
+	bottom:30px;
+	z-index:900;
+}
+
+#back-to-top:hover
+{
+	border-color:#000;
+}
+
+#back-to-top .fa
+{
+	font-size:32px;
+	margin-right:0;
+}
+/**/
+/*===============================================================================================================*/
+/*slide show*/
+.myslide1
+{
+	display: none;
+}
+
+img 
+{
+	vertical-align: middle;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slidecontain 
+{
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.prev, .next 
+{
+  cursor: pointer;
+  position: absolute;
+  top: 32%;
+  width: auto;
+
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+ }
+
+.next 
+{
+  right: 160px;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev
+{
+	left: 160px;
+}
+
+.prev:hover, .next:hover 
+{
+  background-color: #f1f1f1;
+  color: black;
+}
+/*===============================================================================================================*/
+/*shop*/
+.filterDiv 
+{
+  display: none;
+}
+
+.show 
+{
+  display: block;
+}
+
+.container 
+{
+  margin-top: 20px;
+  overflow: hidden;
+}
+/*===============================================================================================================*/
+/*visit*/
+.h
+{
+	border: 5px rgba(0);
+}
+/*===============================================================================================================*/
