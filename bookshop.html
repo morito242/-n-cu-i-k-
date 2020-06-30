@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOKSHOP</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="css/bookshop.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>	
+	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+  <link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+</head>
+<body>
+	<div id="mebar" class="ttop">
+		<div class="tbar tblack tcard">
+			<!--Menu-->
+			<ul>
+				<li><a class = "tbaritem tpaddinglarge" href="bookshop.html"><span class="tr"><span id="re">T</span>&amp;<span id="ye">P</span></span> BOOKSTORE</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="bookshop.html">HOME</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="shop.html">SHOP</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="visit.html">VISIT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="about.html">ABOUT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="contact.html">CONTACT</a></li>
+			</ul>
+			<!--Nút bar-->
+			<a href="javascript:void(0)" class="tpaddinglarge tbaritem tbutton tright thidelarge thidemedium" onclick="myopen()"><i class="fa fa-bars"></i></a>
+			<!--Nút giỏ hàng-->
+			<button id = "shopcart" class="tbaritem tpaddinglarge tright tbutton" disabled><i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+				<div id="mycart" class="cart">
+					<div class="cartcontent">
+						<div class="cartheader">
+							<h4 class="carttitle">Giỏ Hàng</h4>
+							<span class="close">&times;</span>
+						</div>
+				
+						<div class="cartbody">
+							<div class="ghrow">
+								<span class="ghitem ghheader ghcolumn">Sản Phẩm</span>
+								<span class="ghprice ghheader ghcolumn">Giá</span>
+								<span class="ghquantity ghheader ghcolumn">Số Lượng</span>
+							</div>
+				
+							<div class="ghitems">
+				
+							</div>
+							<div class="ghtotal">
+								<strong class="ghtotaltitle">Tổng Cộng:</strong>
+								<span class="ghtotalprice">0</span>
+							</div>
+						</div>
+						<div class="cartfooter">
+							<button type="button" class="btn btnsecondary closefooter" style="background: #f00;">Đóng</button>
+							<button type="button" class="btn btnprimary order" style="background: #005fbf;">Thanh Toán</button>
+						</div>
+					</div>
+				</div>
+			<!--Nút tìm kiếm-->
+			<div class="tbaritem tpaddinglarge  tbutton tright search">
+				<input type="text" placeholder="Search here..."/>
+				<a><i class="fa fa-search"></i></a>
+			</div>
+		</div>
+	</div>
+<!--=====================================================================================================-->
+	<div id="sidebar" class="tsidebar tbarblock tblack tcard tanimateleft thidemedium thidelarge">
+  		<a><i onclick="myclose()" class="fa fa-remove thidelarge tbutton tdisplaytopright"></i><br/></a>
+  		<a href="bookshop.html" onclick="myclose()" class="tbaritem tbutton">HOME</a>
+  		<a href="shop.html" onclick="myclose()" class="tbaritem tbutton">SHOP</a>
+  		<a href="visit.html" onclick="myclose()" class="tbaritem tbutton">VISIT</a>
+  		<a href="about.html" onclick="myclose()" class="tbaritem tbutton">ABOUT</a>
+  		<a href="contact.html" onclick="myclose()" class="tbaritem tbutton">CONTACT</a>
+	</div>
+<!--=====================================================================================================-->	
+	<main class="mt-5" style="background-image: url(Images/nen2.jpg); background-attachment: fixed; padding-top: 0;">
+    	<div class="container" >
+			<div style="max-width: 2000px; margin-top: 46px;">
+				<div class="myslide myslide1">
+					<img src="Images/h9.jpg" style="width: 100%">
+				</div>
+				<div class="myslide myslide1">
+					<img src="Images/h10.jpg" style="width: 100%">
+				</div>
+				<div class="myslide myslide1">
+					<img src="Images/h16.jpg" style="width: 100%">
+				</div>
+				<a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+			</div>
+      	<!--Grid row================================================================================================-->
+      		<div style="text-align: center;">
+      			<br/>
+      			<h3 class="text-uppercase font-weight-bold" >
+      				<strong>NHỮNG QUYỂN SÁCH NỔI BẬT</strong></h3>
+      			<hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 500px;">		
+      		</div>
+      		<div class="row">
+        		<div class="col-lg-4 col-md-12 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/bmclhd.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+              				<h3 class="card-title cont">Người nam châm - Bí mật của luật hấp dẫn</h3>
+              				<p class="card-text">Jack Canfield</p>
+              				<p class="card-text price" style="text-align: center; font-weight: bold; font-size: 16px;">70000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            			</div>
+          			</div>
+        		</div>
+			<!--Grid row================================================================================================-->
+        		<div class="col-lg-4 col-md-6 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/đvbka.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+              				<h3 class="card-title cont">Đọc vị bất kì ai - Để không bị lừa dối và lợi dụng</h3>
+              				<p class="card-text">TS. David J.Lieberman</p>
+              				<p class="card-text price" style="font-weight: bold; font-size: 16px;">100000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            			</div>
+          			</div> 
+        		</div>
+			<!--Grid row================================================================================================-->
+        		<div class="col-lg-4 col-md-6 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/lstgcnn.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+              				<h3 class="card-title cont">Lối sống tối giản của người Nhật</h3>
+              				<p class="card-text">Sasaki Fumio</p>
+                			<p class="card-text price" style="font-weight: bold; font-size: 16px;">80000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            				</div>
+          			</div>
+        		</div>
+			<!--Grid row================================================================================================-->
+        		<div class="col-lg-4 col-md-6 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/ptslm.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+              				<h3 class="card-title cont">Nhân tố enzym - phương thức sống lành mạnh</h3>
+              				<p class="card-text">Hiromi Shinya</p>
+              				<p class="card-text price" style="font-weight: bold; font-size: 16px;">90000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            			</div>
+          			</div>
+        		</div>
+			<!--Grid row================================================================================================-->
+        		<div class="col-lg-4 col-md-6 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/nglg.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nghĩ giàu làm giàu</h3>
+              				<p class="card-text">Napoleon Hill</p>
+              				<p class="card-text price" style="font-weight: bold; font-size: 16px;">100000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            			</div>
+          			</div>
+        		</div>
+			<!--Grid row================================================================================================-->
+        		<div class="col-lg-4 col-md-6 mb-4">
+          			<div class="card">
+            			<div class="view overlay">
+              				<img src="Images/tđb.jpg" style="height: 234px;" class="card-img-top" alt>
+              				<a href="#">
+                				<div class="mask rgba-white-slight"></div>
+              				</a>
+            			</div>
+            			<div class="card-body" style="text-align: center;">
+              				<h3 class="card-title cont">Trên đường băng</h3>
+              				<p class="card-text">Tony buổi sáng</p>
+              				<p class="card-text price" style="font-weight: bold; font-size: 16px;">110000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+            			</div>
+          			</div>
+        		</div>
+      		</div>
+    	</div>
+  	</main>
+<!--=====================================================================================================-->
+	<footer class="page-footer font-small unique-color-dark" style="background: #000!important;">
+		<br/>
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>ABOUT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Group deals</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                </div>
+                
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>SUPPORT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">24/7 support</a></p>
+                    <p><a href="#">Help&quest;</a></p>
+                    <p><a href="#">Term &amp; Condition</a></p>
+                    <p><a href="#">Shipping Rates &amp; Delivery</a></p>
+                </div>
+                
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>STORE</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><i class="fa fa-fw fa-map-marker"></i> T&amp;P BOOKSTOTE</p>
+					<p><i class="fa fa-fw fa-phone"></i> 09xxxxxxxx</p>
+					<p><i class="fa fa-fw fa-envelope"></i> exa@gmail.com</p>
+                </div>
+         
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>FOLLOW US</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></p>
+					<p><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i></a></p>
+					<p><a href="#"><i class="fa fa-github-square" aria-hidden="true"> Github</i></a></p>				
+					<p><a href="#"><i class="fa fa-git-square" aria-hidden="true"> Git</i></a></p>
+					<p><a href="#"><i class="fa fa-instagram" aria-hidden="true"> Instagram</i></a></p>				
+					<p><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"> Linkedin</i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3" style="background: #333!important;">
+        	<p>&copy; 2020 The Book Store. All Rights Reserved</p>
+        </div>
+    </footer>
+<!--=====================================================================================================-->
+	<a id="back-to-top" href="bookshop.html">
+        <i class="fa fa-angle-up"></i>
+    </a>
+	<script type="text/javascript" src="js/bookshop.js"></script>
+	<script type="text/javascript" src="js/giohang.js"></script>
+</body>
+</html>
+
+<!--   -->

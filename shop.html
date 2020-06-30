@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+<head>
+	<title>SHOP</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="css/bookshop.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>	
+	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+	<style>
+		/* Style the buttons */
+		.btn {border: none; outline: none; padding: 12px 16px; background-color: #f1f1f1; cursor: pointer;}
+		.btn:hover{background-color: #ddd;}
+		.btn.active {background-color: #666; color: white;}
+	</style>
+</head>
+<body>
+	<div id="mebar" class="ttop">
+		<div class="tbar tblack tcard">
+			<!--Menu-->
+			<ul>
+				<li><a class = "tbaritem tpaddinglarge" href="bookshop.html"><span class="tr"><span id="re">T</span>&amp;<span id="ye">P</span></span> BOOKSTORE</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="bookshop.html">HOME</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="shop.html">SHOP</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="visit.html">VISIT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="about.html">ABOUT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="contact.html">CONTACT</a></li>
+			</ul>
+			<!--Nút bar-->
+			<a href="javascript:void(0)" class="tpaddinglarge tbaritem tbutton tright thidelarge thidemedium" onclick="myopen()"><i class="fa fa-bars"></i></a>
+			<!--Nút giỏ hàng-->
+			<button id = "shopcart" class="tbaritem tpaddinglarge tright tbutton"><i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+				<div id="mycart" class="cart">
+					<div class="cartcontent">
+						<div class="cartheader">
+							<h4 class="carttitle">Giỏ Hàng</h4>
+                        	<span class="close">&times;</span>
+						</div>
+						
+						<div class="cartbody">
+							<div class="ghrow">
+                            	<span class="ghitem ghheader ghcolumn">Sản Phẩm</span>
+                            	<span class="ghprice ghheader ghcolumn">Giá</span>
+                            	<span class="ghquantity ghheader ghcolumn">Số Lượng</span>
+                        	</div>
+          
+                        	<div class="ghitems">
+                        		
+                    		</div>
+                    		<div class="ghtotal">
+                            	<strong class="ghtotaltitle">Tổng Cộng:</strong>
+                            	<span class="ghtotalprice">0</span>
+                        	</div>
+						</div>
+						
+						<div class="cartfooter">
+							<button type="button" class="btn btnsecondary closefooter" style="background: #f00;">Đóng</button>
+							<button type="button" class="btn btnprimary order" style="background: #005fbf;">Thanh Toán</button>
+                    	</div>
+					</div>
+				</div>
+			<!--Nút tìm kiếm-->
+			<div class="tbaritem tpaddinglarge  tbutton tright search">
+				<input type="text" placeholder="Search here..."/>
+				<a><i class="fa fa-search"></i></a>
+			</div>
+		</div>
+	</div>
+<!--=====================================================================================================-->
+	<div id="sidebar" class="tsidebar tbarblock tblack tcard tanimateleft thidemedium thidelarge">
+  		<a><i onclick="myclose()" class="fa fa-remove thidelarge tbutton tdisplaytopright"></i><br/></a>
+  		<a href="bookshop.html" onclick="myclose()" class="tbaritem tbutton">HOME</a>
+  		<a href="shop.html" onclick="myclose()" class="tbaritem tbutton">SHOP</a>
+  		<a href="visit.html" onclick="myclose()" class="tbaritem tbutton">VISIT</a>
+  		<a href="about.html" onclick="myclose()" class="tbaritem tbutton">ABOUT</a>
+  		<a href="contact.html" onclick="myclose()" class="tbaritem tbutton">CONTACT</a>
+	</div>
+<!--=====================================================================================================-->
+	<main class="mt-5" style="background-image: url(Images/nen2.jpg); background-attachment: fixed; padding-top: 0;">
+		<div class="container">
+			<div class="row" style="padding-top: 20px!important; margin-left: 0 !important; margin-right: 0 !important;">
+				<div id="myBtnContainer">
+					<button class="btn active" onclick="filterSelection('all')">All book</button>
+					<button class="btn" onclick="filterSelection('ttt')">Tâm lý</button>
+					<button class="btn" onclick="filterSelection('tech-eco')">Khoa học công nghệ–Kinh tế </button>
+					<button class="btn" onclick="filterSelection('vhnt')">Văn học nghệ thuật</button>
+					<button class="btn" onclick="filterSelection('vhxh')">Văn hóa xã hội–Lịch sử</button>
+					<button class="btn" onclick="filterSelection('t-tt')">Truyện-Tiểu thuyết</button>
+					<br/><br/>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/bmclhd.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Người nam châm - Bí mật của luật hấp dẫn</h3>
+							<p class="card-text">Jack Canfield</p>
+							<p class="card-text price" style="text-align: center; font-weight: bold; font-size: 16px;">70000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/đvbka.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Đọc vị bất kì ai - Để không bị lừa dối và lợi dụng</h3>
+							<p class="card-text">TS. David J.Lieberman</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">100000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/lstgcnn.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Lối sống tối giản của người Nhật</h3>
+							<p class="card-text">Sasaki Fumio</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">80000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv tech-eco">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/ptslm.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nhân tố enzym - phương thức sống lành mạnh</h3>
+							<p class="card-text">Hiromi Shinya</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">90000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/nglg.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nghĩ giàu làm giàu</h3> 
+							<p class="card-text">Napoleon Hill</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">100000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv t-tt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/tđb.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Trên đường băng</h3>
+							<p class="card-text">Tony buổi sáng</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">110000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/đnt.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Đắc nhân tâm</h3>
+							<p class="card-text">Dale Carnegie</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">120000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv t-tt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/ngk.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nhà Giả Kim</h3>
+							<p class="card-text">Paulo Coelho</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">90000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv ttt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/ttđgbn.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Tuổi Trẻ Đáng Giá Bao Nhiêu?</h3>
+							<p class="card-text">Rosie Nguyễn</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">85000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhxh">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/stsđ.jfif" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Steve Jobs - Sống để thay đổi thế giới</h3>
+							<p class="card-text">Rosie Nguyễn</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">50000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv tech-eco">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/6pm.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Sáu phát minh làm nên thời đại</h3>
+							<p class="card-text">Steven Johnsona</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">100000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv tech-eco">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/nntp.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Những người tiên phong</h3>
+							<p class="card-text">Walter Issacson</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">200000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhnt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/ntbhcndt.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nghệ thuật bán hàng của người Do Thái</h3>
+							<p class="card-text">Yaniv Zaid</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">45000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv t-tt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/mb.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Mắt biếc</h3>
+							<p class="card-text">Nguyễn Nhật Ánh</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">55000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhxh">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/nvtdls.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Người việt trong dòng lịch sử văn hóa</h3>
+							<p class="card-text">Nguyễn Xuân Kính</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">350000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhnt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/nvvstnt.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Nhà văn và sáng tạo nghệ thuật</h3>
+							<p class="card-text">Lê Ngọc Trà</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">58000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhxh">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/vhnt.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Văn hóa nguyên thủy</h3>
+							<p class="card-text">Edward Bernett Tylor</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">310000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4 col-md-6 mb-4 filterDiv vhnt">
+					<div class="card">
+						<div class="view overlay">
+							<img src="Images/vhk.jpg" style="height: 234px;" class="card-img-top" alt>
+							<a href="#">
+								<div class="mask rgba-white-slight"></div>
+							</a>
+						</div>
+						<div class="card-body" style="text-align: center;">
+							<h3 class="card-title cont">Văn hóa Kiều</h3>
+							<p class="card-text">Phạm Đan Quế</p>
+							<p class="card-text price" style="font-weight: bold; font-size: 16px;">400000VNĐ</p>
+							<a href="#!" class="btn">Chi tiết</a>
+							<button class="btn btn-indigo">Add Cart</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+<!--=====================================================================================================-->
+	<footer class="page-footer font-small unique-color-dark" style="background: #000!important;">
+		<br/>
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>ABOUT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Group deals</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                </div>
+                
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>SUPPORT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">24/7 support</a></p>
+                    <p><a href="#">Help&quest;</a></p>
+                    <p><a href="#">Term &amp; Condition</a></p>
+                    <p><a href="#">Shipping Rates &amp; Delivery</a></p>
+                </div>
+                
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>STORE</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><i class="fa fa-fw fa-map-marker"></i> T&amp;P BOOKSTOTE</p>
+					<p><i class="fa fa-fw fa-phone"></i> 09xxxxxxxx</p>
+					<p><i class="fa fa-fw fa-envelope"></i> exa@gmail.com</p>
+                </div>
+         
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>FOLLOW US</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></p>
+					<p><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i></a></p>
+					<p><a href="#"><i class="fa fa-github-square" aria-hidden="true"> Github</i></a></p>				
+					<p><a href="#"><i class="fa fa-git-square" aria-hidden="true"> Git</i></a></p>
+					<p><a href="#"><i class="fa fa-instagram" aria-hidden="true"> Instagram</i></a></p>				
+					<p><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"> Linkedin</i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3" style="background: #333!important;">
+        	<p>&copy; 2020 The Book Store. All Rights Reserved</p>
+        </div>
+    </footer>
+<!--=====================================================================================================-->
+	<a id="back-to-top" href="shop.html">
+        <i class="fa fa-angle-up"></i>
+    </a>
+	<script type="text/javascript" src="js/bookshop.js"></script>
+	<script type="text/javascript" src="js/giohang.js"></script>
+	<script>
+		filterSelection("all")
+		function filterSelection(c) {
+			var x, i;
+			x = document.getElementsByClassName("filterDiv");
+			if (c == "all") c = "";
+			for (i = 0; i < x.length; i++) {
+				RemoveClass(x[i], "show");
+				if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+			}
+		}
+
+		function AddClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+			}
+		}
+
+		function RemoveClass(element, name) {
+			var i, arr1, arr2;
+			arr1 = element.className.split(" ");
+			arr2 = name.split(" ");
+			for (i = 0; i < arr2.length; i++) {
+				while (arr1.indexOf(arr2[i]) > -1) {
+					arr1.splice(arr1.indexOf(arr2[i]), 1);
+				}
+			}
+			element.className = arr1.join(" ");
+		}
+
+		// Add active class to the current button (highlight it)
+		var btnContainer = document.getElementById("myBtnContainer");
+		var btns = btnContainer.getElementsByClassName("btn");
+		for (var i = 0; i < btns.length; i++) {
+			btns[i].addEventListener("click", function () {
+				var current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace(" active", "");
+				this.className += " active";
+			});
+		}
+	</script>
+</body>
+</html>

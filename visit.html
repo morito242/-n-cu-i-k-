@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+	<title>VISIT</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<link rel="stylesheet" type="text/css" href="css/bookshop.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>	
+	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/mdb.min.css">
+  	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+	<style>
+		
+	</style>
+</head>
+<body>
+	<div id="mebar" class="ttop">
+		<div class="tbar tblack tcard">
+			<!--Menu-->
+			<ul>
+				<li><a class = "tbaritem tpaddinglarge" href="bookshop.html"><span class="tr"><span id="re">T</span>&amp;<span id="ye">P</span></span> BOOKSTORE</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="bookshop.html">HOME</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="shop.html">SHOP</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="visit.html">VISIT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="about.html">ABOUT</a></li>
+				<li><a class="tbaritem tbutton tpaddinglarge thidesmall" href="contact.html">CONTACT</a></li>
+			</ul>
+			<!--Nút bar-->
+			<a href="javascript:void(0)" class="tpaddinglarge tbaritem tbutton tright thidelarge thidemedium" onclick="myopen()"><i class="fa fa-bars"></i></a>
+			<!--Nút giỏ hàng-->
+			<button id = "shopcart" class="tbaritem tpaddinglarge tright tbutton" disabled><i class="fa fa-shopping-basket" aria-hidden="true"></i></button>
+				<div id="mycart" class="cart">
+					<div class="cartcontent">
+						<div class="cartheader">
+							<h5 class="carttitle">Giỏ Hàng</h5>
+                        	<span class="close">&times;</span>
+						</div>
+						
+						<div class="cartbody">
+							<div>
+                            	<span>Sản Phẩm</span>
+                            	<span>Giá</span>
+                            	<span>Số Lượng</span>
+                        	</div>
+							
+							<div class="carttotal">
+                            	<strong>Tổng Cộng:</strong>
+                            	<span>0VNĐ</span>
+                        	</div>
+						</div>
+						
+						<div class="cartfooter">
+							<button type="button" class="btn btnsecondary closefooter" style="background: #f00;">Đóng</button>
+							<button type="button" class="btn btnprimary order" style="background: #005fbf;">Thanh Toán</button>
+                    	</div>
+					</div>
+				</div>
+			<!--Nút tìm kiếm-->
+			<div class="tbaritem tpaddinglarge  tbutton tright search">
+				<input type="text" placeholder="Search here..."/>
+				<a><i class="fa fa-search"></i></a>
+			</div>
+		</div>
+	</div>
+<!--=====================================================================================================-->
+	<div id="sidebar" class="tsidebar tbarblock tblack tcard tanimateleft thidemedium thidelarge">
+  		<a><i onclick="myclose()" class="fa fa-remove thidelarge tbutton tdisplaytopright"></i><br/></a>
+  		<a href="bookshop.html" onclick="myclose()" class="tbaritem tbutton">HOME</a>
+  		<a href="shop.html" onclick="myclose()" class="tbaritem tbutton">SHOP</a>
+  		<a href="visit.html" onclick="myclose()" class="tbaritem tbutton">VISIT</a>
+  		<a href="about.html" onclick="myclose()" class="tbaritem tbutton">ABOUT</a>
+  		<a href="contact.html" onclick="myclose()" class="tbaritem tbutton">CONTACT</a>
+	</div>
+<!--=====================================================================================================-->
+<center>
+	<main style="background-image: url(Images/nen2.jpg); background-attachment: fixed; padding-top: 5px;">
+		<div>
+			<div class="p" style="margin-top: 60px!important; margin-bottom: 5px!important">
+				<p class="h">Sau đây là một số hình ảnh về shop tại địa chỉ của chúng tôi.<br>Các bạn có thể xem qua để hiểu
+					rõ hơn về sự chu đáo của chúng tôi trong việc mang đến tri thức cho bạn.</p>
+			</div>
+			<div class="view overlay z-depth-1-half im">
+				<div class="col-md-7 mb-4" style="padding-top: 20px;">
+					<p>Với mong muốn mang lại cho bạn đọc một điểm đến lý tưởng để mua sách với những trải nghiệm tốt nhất,
+						T&P bookstore chỉ tập trung vào sản phẩm sách với hàng chục ngàn đầu sách khác nhau. Bạn có thể dễ
+						dàng và nhanh chóng tìm được những đầu sách như ý với ít thao tác nhất và ít thời gian nhất,
+						những cuốn sách phù hợp nhất với nhu cầu đọc của mình.</p>
+					<img class="col-mb-7" src="Images/h1.jpg" class="card-img-top" width="560" height="330">
+				</div>
+			</div>
+
+			<div class="view overlay z-depth-1-half">
+				<div class="col-md-7 mb-4" style="padding-top: 20px;">
+					<p>Về lĩnh vực sách ELT, hiện nay T & P Bookstore đã và đang là nhà phân phối tất cả các loại sách học
+						ngữ, từ điển, các giáo trình tiếng Anh với đủ mọi cấp độ cho các Trung tâm Anh ngữ, các trường Đại
+						học ở TP.HCM nói riêng và cả nước nói chung thông qua các loại sách từ những NXB danh tiếng trên thế
+						giới như Oxford, Cambridge, Pearson Education, Cengage Learning, McGraw-Hill… Đặc biệt, ở lĩnh vực
+						này T & P Bookstore là nhà phát hành độc quyền các ấn phẩm của NXB Oxford tại thị trường Việt Nam bộ
+						sách Let’s Go; hợp tác với NXB Cambridge in ấn và phát hành tại Việt Nam một số bộ giáo trình Anh
+						ngữ New Interchange, Connect, American Primary Colors; Vocabulary in use; Grammar in use… nhằm giảm
+						bớt giá thành so với giá sách nhập khẩu, phục vụ nhu cầu tìm hiểu nâng cao vốn tiếng Anh của đông
+						đảo độc giả.</p>
+					<img alt="hình ảnh về shop" src="Images/h2.jpg" / width="560" height="330">
+				</div>
+			</div>
+
+			<div class="view overlay z-depth-1-half">
+				<div class="col-md-7 mb-4" style="padding-top: 20px;">
+					<p>Về lĩnh vực sách chuyên ngành (Academic), T & P Bookstore vẫn được xem là nhà phân phối lớn nhất các
+						loại sách chuyên ngành phục vụ nhu cầu học tập, nghiên cứu cho các bạn sinh viên, các giáo viên,
+						giáo sư, những người làm công tác nghiên cứu và hầu hết mọi đối tượng bạn đọc. T & P Bookstore luôn
+						năng động và nhạy bén trong việc nắm bắt nhu cầu của khách hàng, khai thác tối đa và phục vụ kịp
+						thời nhu cầu của bạn đọc gần xa. Hiện nay, T & P Bookstore đang là nhà phát hành cho các tập đoàn
+						xuất bản lớn của Anh, Mỹ như NXB McGraw-Hill, Pearson Education, Cengage Learning, John Wiley…. Đến
+						với cửa hàng sách ngoại văn của T & P Bookstore bạn đọc sẽ tìm thấy hàng loạt các loại sách chuyên
+						ngành bao gồm các thể loại đa dạng thuộc các lĩnh vực Kinh tế, Tin học, Y học, Kiến trúc, Hội họa,
+						Khoa học kỹ thuật và các loại sách tham khảo khác</p>
+					<img alt="hình ảnh về shop" src="Images/h3.jpg" width="560" height="330">
+				</div>
+			</div>
+
+			<div class=" view overlay z-depth-1-half" style="padding-bottom: 20px;">
+				<div class="col-lg-7 col-md-12" style="padding-top: 20px;">
+					<div class="row"	>
+						<div class="col-lg-4 col-md-12 mb-3">
+							<p><i class="fa fa-map fa-1x mr-2 black-text">New York, NY 10012</i></p>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<p><i class="fa fa-building fa-1x mr-2 black-text">Mon - Fri, 8:00-22:00</i></p>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<p><i class="fa fa-phone fa-1x mr-2 black-text">+ 01 234 567 89</i></p>
+						</div>
+					</div>
+				</div>
+				<iframe
+					src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.586251903695!2d106.70403190802817!3d10.798096532794807!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x317528b0af6c8691%3A0x764e0f592a64d478!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBLaW5oIHThur8gVMOgaSBjaMOtbmggVFAuSENN!5e0!3m2!1svi!2s!4v1593363020528!5m2!1svi!2s"
+						width="900" height="350" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+						tabindex="0"></iframe>
+			</div>
+		</div>
+	</main>
+</center>
+<!--=====================================================================================================-->
+	<footer class="page-footer font-small unique-color-dark" style="background: #000!important;">
+		<br/>
+        <div class="container mt-5 mb-4 text-center text-md-left">
+            <div class="row mt-3">
+                <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>ABOUT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">Blog</a></p>
+                    <p><a href="#">Group deals</a></p>
+                    <p><a href="#">Privacy Policy</a></p>
+                </div>
+                
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>SUPPORT</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#">24/7 support</a></p>
+                    <p><a href="#">Help&quest;</a></p>
+                    <p><a href="#">Term &amp; Condition</a></p>
+                    <p><a href="#">Shipping Rates &amp; Delivery</a></p>
+                </div>
+                
+                <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>STORE</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><i class="fa fa-fw fa-map-marker"></i> T&amp;P BOOKSTOTE</p>
+					<p><i class="fa fa-fw fa-phone"></i> 09xxxxxxxx</p>
+					<p><i class="fa fa-fw fa-envelope"></i> exa@gmail.com</p>
+                </div>
+         
+                <div class="col-md-4 col-lg-3 col-xl-3">
+                    <h6 class="text-uppercase font-weight-bold">
+                        <strong>FOLLOW US</strong>
+                    </h6>
+                    <hr class="deep-purple accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+                    <p><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"> Facebook</i></a></p>
+					<p><a href="#"><i class="fa fa-twitter-square" aria-hidden="true"> Twitter</i></a></p>
+					<p><a href="#"><i class="fa fa-github-square" aria-hidden="true"> Github</i></a></p>				
+					<p><a href="#"><i class="fa fa-git-square" aria-hidden="true"> Git</i></a></p>
+					<p><a href="#"><i class="fa fa-instagram" aria-hidden="true"> Instagram</i></a></p>				
+					<p><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"> Linkedin</i></a></p>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3" style="background: #333!important;">
+        	<p>&copy; 2020 The Book Store. All Rights Reserved</p>
+        </div>
+    </footer>
+<!--=====================================================================================================-->
+	<a id="back-to-top" href="visit.html">
+        <i class="fa fa-angle-up"></i>
+    </a>
+	<script type="text/javascript" src="js/bookshop.js"></script>
+</body>
+</html>
